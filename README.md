@@ -1,3 +1,5 @@
+To install to a TiddlyWiki running in the browser, drag the plugin from the demo TiddlyWiki at https://clutterstack.github.io/TW5-chooser-horiz/
+
 # Introduction
 
 This horizontal chooser widget for TiddlyWiki 5 is an animated chooser that stores the selected value when clicked. It allows selection options to be displayed on a horizontal line, and can be dragged to scroll when the options do not all fit within the visible element. 
