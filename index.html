@@ -161,6 +161,8 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
+<li>$:/temp/scrolling-chooser/output</li>
+
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/themes/tiddlywiki/vanilla</li>
@@ -9058,7 +9060,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/clutterstack/chooser-horiz]]</pre>
+# [[HorizontalChooserWidget]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9103,7 +9105,7 @@ Error message and password prompt
 <div created="20200328203119931" creator="C" modified="20200328203120553" modifier="Chri" title="$:/status/UserName">
 <pre>Chris</pre>
 </div>
-<div created="20200522191104096" creator="Chris" list="HorizontalChooserWidget" modified="20200522191113527" modifier="Chris" title="$:/StoryList">
+<div list="HorizontalChooserWidget" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9159,6 +9161,9 @@ Error message and password prompt
         }
     }
 }</pre>
+</div>
+<div created="20200522191621874" creator="Chris" modified="20200522191621874" modifier="Chris" title="$:/temp/scrolling-chooser/output">
+<pre>item6</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.19">
 <pre>{
@@ -9269,7 +9274,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200518035453884" creator="chris" modified="20200522185231840" modifier="chris" tags="docs" title="HorizontalChooserWidget">
+<div created="20200518035453884" creator="chris" modified="20200522191523778" modifier="chris" tags="docs" title="HorizontalChooserWidget">
 <pre>!Introduction
 
 This horizontal chooser widget is an animated chooser that stores the selected value when clicked. It allows selection options to be displayed on a horizontal line and can be dragged to scroll when the options do not all fit within the visible element.
@@ -9308,13 +9313,11 @@ With no further attributes specified, the output (the value of the option clicke
 
 After clicking on an item, we can check the `chooser_result` field in this tiddler to see the selection stored there.
 
-!! Replace the `text` field in the containing tiddler (potential GOTCHA)
+!! (Potential GOTCHA) Replace the `text` field in the containing tiddler
 
 I'll transclude a tiddler to demonstrate this:
 
-
 {{HorizScrollChooser overwrite example}}
-
 
 !! Specifying tiddler and field attributes to store output
 
@@ -9336,9 +9339,7 @@ When done with the item list, close the setWidget tag:
 ```
 &lt;/$set&gt;
 ```
-&lt;/$set&gt;
-
-</pre>
+&lt;/$set&gt;</pre>
 </div>
 <div created="20200518164542248" creator="chris" modified="20200522190140404" modifier="chris" tags="HorizontalChooserWidget" title="HorizScrollChooser overwrite example">
 <pre>If I don't specify a tiddler title but do specify the `text` field, I can overwrite the tiddler containing the ~HorizScrollChooser widget with the selected output! The ~TiddlyWiki ~SelectWidget can do this too. It could be a huge gotcha but in principle it could be useful in a tiddler generated from a template, so I am leaving it like that. 
