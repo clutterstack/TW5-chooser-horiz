@@ -46,7 +46,7 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>TW5-chooser-horiz — </title>
+<title>TW5-chooser-horiz — A chooser plugin for TiddlyWiki</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 
@@ -170,6 +170,8 @@ Error message and password prompt
 <li>HorizontalChooserWidget</li>
 
 <li>HorizScrollChooser overwrite example</li>
+
+<li>TiddlyWiki</li>
 
 </ul>
 </p>
@@ -9054,8 +9056,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200402160524896" creator="Chris" modified="20200522183156240" modifier="Chris" title="$:/DefaultTiddlers">
-<pre>HorizontalChooserWidget </pre>
+<div created="20200402160524896" creator="Chris" modified="20200522231253384" modifier="Chris" title="$:/DefaultTiddlers">
+<pre>TiddlyWiki HorizontalChooserWidget </pre>
 </div>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
@@ -9065,7 +9067,7 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div author="Chris NIcoll" bag="default" core-version="&gt;=5.1.22" created="20200522161930162" creator="chris" dependents="" description="horizontal scrolling chooser" list="" modified="20200522162114475" modifier="chris" plugin-type="plugin" revision="0" source="" tags="" title="$:/plugins/clutterstack/chooser-horiz" type="application/json" version="0.0.8">
+<div author="Chris NIcoll" bag="default" core-version="&gt;=5.1.22" created="20200522161930162" creator="chris" dependents="" description="Horizontal Scrolling Chooser" list="" modified="20200522220500346" modifier="Chris" plugin-type="plugin" revision="0" source="" tags="" title="$:/plugins/clutterstack/chooser-horiz" type="application/json" version="0.0.10">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/clutterstack/chooser-horiz/stylesheet.css&quot;: {
@@ -9090,14 +9092,14 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200328203114737" modified="20200328203117948" title="$:/SiteSubtitle">
-<pre></pre>
+<div created="20200328203114737" creator="Chris" modified="20200522220245070" modifier="Chris" title="$:/SiteSubtitle">
+<pre>A chooser plugin for TiddlyWiki</pre>
 </div>
 <div created="20200318155536730" creator="Chris" modified="20200522183121548" modifier="Chris" title="$:/SiteTitle">
 <pre>TW5-chooser-horiz</pre>
 </div>
-<div created="20200405225127946" creator="Chris" modified="20200522191102472" modifier="Chris" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Plugins</pre>
+<div created="20200405225127946" creator="Chris" modified="20200522233457313" modifier="Chris" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
 <div created="20200405225125875" creator="Chris" modified="20200522183212219" modifier="Chris" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/More</pre>
@@ -9105,7 +9107,7 @@ Error message and password prompt
 <div created="20200328203119931" creator="C" modified="20200328203120553" modifier="Chri" title="$:/status/UserName">
 <pre>Chris</pre>
 </div>
-<div list="HorizontalChooserWidget" title="$:/StoryList">
+<div list="TiddlyWiki HorizontalChooserWidget" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9274,7 +9276,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20200518035453884" creator="chris" modified="20200522191523778" modifier="chris" tags="docs" title="HorizontalChooserWidget">
+<div created="20200518035453884" creator="chris" modified="20200522233654172" modifier="Chris" tags="docs" title="HorizontalChooserWidget">
 <pre>!Introduction
 
 This horizontal chooser widget is an animated chooser that stores the selected value when clicked. It allows selection options to be displayed on a horizontal line and can be dragged to scroll when the options do not all fit within the visible element.
@@ -9282,6 +9284,8 @@ This horizontal chooser widget is an animated chooser that stores the selected v
 This is really just a proof of concept, because (a) it relies on mouse events and does not work on touch interfaces, and (b) I'm sure it's an accessibility nightmare. I would guess that event handling would be easier to sort out than accessibility issues.
 
 Styling for the widget is in the tiddler [[$:/plugins/clutterstack/chooser-horiz/stylesheet.css]].
+
+To install, drag $:/plugins/clutterstack/chooser-horiz to the dropzone at the top of an open TiddlyWiki in the browser.
 
 !Attributes
 
@@ -9315,7 +9319,7 @@ After clicking on an item, we can check the `chooser_result` field in this tiddl
 
 !! (Potential GOTCHA) Replace the `text` field in the containing tiddler
 
-I'll transclude a tiddler to demonstrate this:
+The next example is the tiddler [[HorizScrollChooser overwrite example]], transcluded. If you select a value from the following chooser, it will overwrite the text of that tiddler.
 
 {{HorizScrollChooser overwrite example}}
 
@@ -9351,6 +9355,9 @@ When done with the item list, close the setWidget tag:
 &lt;$set name=&quot;items&quot; value=&quot;item1 item2 item3 item4 item5 item6 item7 ni 42 [[Earl Grey]] Ravenclaw non-trivial caracal&quot;&gt;
 &lt;$horizscrollchooser items=&lt;&lt;items&gt;&gt; field=&quot;text&quot;/&gt;
 &lt;/$set&gt;</pre>
+</div>
+<div created="20200522231139442" creator="Chris" modified="20200522231513648" modifier="Chris" tags="" title="TiddlyWiki">
+<pre>This page is a ~TiddlyWiki. ~TiddlyWiki is a project of Jeremy Ruston (https://github.com/Jermolene). See https://tiddlywiki.com for more.</pre>
 </div>
 
 </div>
